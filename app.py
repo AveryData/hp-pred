@@ -10,7 +10,7 @@ import pandas as pd
 import plotly.express as px
 st.set_page_config(layout="wide")
 import plotly.graph_objects as go
-from fbprophet import Prophet
+from prophet import Prophet
 from pandas import to_datetime
 import ruptures as rpt
 import numpy as np
@@ -56,7 +56,7 @@ with col3:
 #df = df.loc[min_idx:max_idx,:]
 df = df[["Date", option]]
 df.columns = ['ds','y']
-df['ds']= to_datetime(df['ds'],format='%Y-%m-%d %H:%M:%S.%f')
+df['ds']= to_datetime(df['ds'], format='mixed')
 
 
 
